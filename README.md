@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TikTok Emoji Lab
 
-## Getting Started
+TikTok Emoji Lab is a public, SEO-focused reference site for TikTok hidden emoji shortcodes. It helps creators search, copy, understand, and download TikTok-style emoji codes such as `[happy]`, `[shock]`, `[wronged]`, and `[laughwithtears]`.
 
-First, run the development server:
+Live site: [https://tiktokemojicodes.com](https://tiktokemojicodes.com)
+
+GitHub: [w66917759-commits/tiktok-emoji-codes](https://github.com/w66917759-commits/tiktok-emoji-codes)
+
+## What It Includes
+
+- 46 TikTok hidden emoji shortcode entries with PNG references.
+- Dedicated static SEO pages for each shortcode, such as `/happy-tiktok-emoji`.
+- Copy-ready shortcode UI for creator comments and captions.
+- Emoji pack, recipe, use-case, and PNG download sections.
+- Long-tail guides for common searches like how to use TikTok emojis.
+- Legal and trust pages: About, Privacy, Contact, and Terms.
+- Dynamic sitemap and robots routes built from the project data sources.
+
+## Tech Stack
+
+- Next.js 16 App Router
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- lucide-react icons
+- Vercel production deployment
+
+## Project Structure
+
+```text
+src/app/                 App Router pages, metadata, sitemap, and robots routes
+src/components/          Homepage, legal page, and copy-code UI components
+src/lib/tiktok-emojis.ts TikTok emoji data, SEO helpers, packs, and recipes
+src/lib/articles.ts      Long-tail guide content
+src/lib/legal-pages.ts   About, privacy, contact, and terms content
+src/lib/site.ts          Site name, description, and absolute URL helpers
+public/emojis/tiktok/    Emoji PNG assets
+```
+
+## Local Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Run lint checks:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+```
 
-## Learn More
+Create a production build:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Start the production server after building:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run start
+```
 
-## Deploy on Vercel
+## Environment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Set the canonical production URL so metadata, sitemap, robots, and structured links resolve to the apex domain:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+NEXT_PUBLIC_SITE_URL=https://tiktokemojicodes.com
+```
+
+If `NEXT_PUBLIC_SITE_URL` is not set, the app falls back to Vercel URL variables and then `http://localhost:3000`.
+
+## Content Model
+
+The main content source is `src/lib/tiktok-emojis.ts`. Adding or editing a TikTok emoji there affects:
+
+- homepage search and category browsing
+- shortcode copy surfaces
+- `/xxx-tiktok-emoji` static pages
+- sitemap entries
+- related emoji recommendations
+- PNG download naming
+
+Long-tail editorial guides live in `src/lib/articles.ts`, and legal pages live in `src/lib/legal-pages.ts`.
+
+## Deployment Notes
+
+The production project is deployed on Vercel with the apex domain as the canonical host:
+
+- Canonical site: [https://tiktokemojicodes.com](https://tiktokemojicodes.com)
+- Sitemap: [https://tiktokemojicodes.com/sitemap.xml](https://tiktokemojicodes.com/sitemap.xml)
+- Robots: [https://tiktokemojicodes.com/robots.txt](https://tiktokemojicodes.com/robots.txt)
+
+This project is independent and is not affiliated with, endorsed by, or sponsored by TikTok, ByteDance, or any related company.
+
+## License
+
+No open-source license has been declared yet. Until a license is added, the code is public for viewing but not automatically licensed for reuse.
