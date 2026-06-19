@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import { getSiteUrl, siteDescription, siteName } from "@/lib/site";
 import "./globals.css";
+
+const GOOGLE_TAG_ID = "G-JC96K64SM7";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,6 +49,19 @@ export default function RootLayout({
       <body className="min-h-full" suppressHydrationWarning>
         {children}
       </body>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}`}
+        strategy="beforeInteractive"
+      />
+      <Script id="google-tag" strategy="beforeInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', '${GOOGLE_TAG_ID}');
+        `}
+      </Script>
     </html>
   );
 }
