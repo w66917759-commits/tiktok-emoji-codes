@@ -1,7 +1,7 @@
 export const siteName = "TikTok Emoji Lab";
 
 export const siteDescription =
-  "Search, copy, and understand TikTok hidden emoji shortcodes with TikTok-only reaction packs and dedicated emoji guides.";
+  "Copy 46 hidden TikTok emoji codes, compare shortcode meanings, and use PNG references for TikTok comments, captions, and edits.";
 
 export function getSiteUrl() {
   const rawUrl =

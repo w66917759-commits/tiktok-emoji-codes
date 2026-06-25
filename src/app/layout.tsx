@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: {
-    default: "All TikTok Emojis",
+    default: "TikTok Emoji Codes: 46 Hidden Emojis to Copy & Paste",
     template: `%s | ${siteName}`,
   },
   description: siteDescription,
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "All TikTok Emojis",
+    title: "TikTok Emoji Codes: 46 Hidden Emojis to Copy & Paste",
     description: siteDescription,
     url: "/",
     siteName,

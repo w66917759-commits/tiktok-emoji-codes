@@ -44,7 +44,9 @@ export async function generateMetadata({ params }: EmojiPageProps): Promise<Meta
     const image = item.image ? absoluteUrl(item.image) : undefined;
 
     return {
-      title: content.title,
+      title: {
+        absolute: content.title,
+      },
       description: content.description,
       alternates: {
         canonical: path,
@@ -79,7 +81,9 @@ export async function generateMetadata({ params }: EmojiPageProps): Promise<Meta
     const path = getArticlePath(article);
 
     return {
-      title: article.title,
+      title: {
+        absolute: article.title,
+      },
       description: article.description,
       alternates: {
         canonical: path,

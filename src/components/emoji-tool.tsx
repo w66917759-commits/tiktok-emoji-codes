@@ -419,14 +419,14 @@ export function EmojiTool() {
           </p>
 
           <h1 className="lab-display">
-            <span className="lab-display-line">All</span>
-            <span className="lab-display-line lab-chroma">TikTok</span>
-            <span className="lab-display-line lab-outline">Emojis</span>
+            <span className="lab-display-line">TikTok </span>
+            <span className="lab-display-line lab-chroma">Emoji </span>
+            <span className="lab-display-line lab-outline">Codes</span>
           </h1>
 
           <p className="lab-lede">
-            A dense index of TikTok shortcode emojis and TikTok-only shortcode packs. Type to filter, click a
-            sticker, copy the code in one tap.
+            Copy 46 hidden TikTok emoji shortcodes, compare meanings, and grab PNG references for comments,
+            captions, and quick edits.
           </p>
 
           <div className="lab-search">

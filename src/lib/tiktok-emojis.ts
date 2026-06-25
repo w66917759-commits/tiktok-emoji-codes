@@ -194,8 +194,9 @@ export function getRelatedTikTokEmojis(item: TikTokEmoji, limit = 4) {
 export function getTikTokEmojiSeoContent(item: TikTokEmoji): TikTokEmojiSeoContent {
   const keyword = getTikTokEmojiKeyword(item);
   const categoryCopy = categorySeoCopy[item.category];
-  const title = `${keyword} ${item.code} - Copy the TikTok Shortcode`;
-  const description = `Copy the ${keyword} shortcode ${item.code}. Learn what this ${item.category.toLowerCase()} TikTok emoji means, when to use it, and related secret emoji codes.`;
+  const baseTitle = `${item.name} TikTok Emoji Code ${item.code}`;
+  const title = baseTitle.length > 58 ? baseTitle : `${baseTitle}: Meaning & PNG`;
+  const description = `Copy the ${keyword} code ${item.code}. See its meaning, usage examples, related hidden emoji codes, and PNG reference.`;
 
   return {
     keyword,

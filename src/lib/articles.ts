@@ -24,7 +24,7 @@ export const longTailArticles: LongTailArticle[] = [
   {
     slug: "how-to-use-tiktok-emojis",
     keyword: "how to use tiktok emojis",
-    title: "How to Use TikTok Emojis Without Guessing the Codes",
+    title: "How to Use TikTok Emojis: Copy Hidden Codes",
     description:
       "A plain guide to using TikTok emoji shortcodes in comments and captions, with bracket examples, mistakes to avoid, and copy-ready codes.",
     lede:
@@ -87,7 +87,7 @@ export const longTailArticles: LongTailArticle[] = [
   {
     slug: "how-to-do-tiktok-emojis",
     keyword: "how to do tiktok emojis",
-    title: "How to Do TikTok Emojis When the Keyboard Does Not Show Them",
+    title: "How to Do TikTok Emojis with Bracket Codes",
     description:
       "Learn how to do TikTok emojis by typing bracket shortcodes manually, copying reliable codes, and checking why a code might stay as text.",
     lede:
@@ -150,7 +150,7 @@ export const longTailArticles: LongTailArticle[] = [
   {
     slug: "how-to-get-tiktok-emojis",
     keyword: "how to get tiktok emojis",
-    title: "How to Get TikTok Emojis: Codes, Comments, and PNGs",
+    title: "How to Get TikTok Emojis: Codes and PNGs",
     description:
       "Find out how to get TikTok emojis by using shortcode lists, copying bracket codes, and downloading PNG versions for edits outside the app.",
     lede:
